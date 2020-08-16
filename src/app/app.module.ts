@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyModule } from './body/body.module';
+import { FaIconModule } from './fa-icon/fa-icon.module';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { BodyModule } from './body/body.module';
   ],
   imports: [
     BrowserModule,
-    BodyModule
+    BodyModule,
+    FaIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
