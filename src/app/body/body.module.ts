@@ -3,16 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { BodyComponent } from './body.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
-import { ShowcaseComponent } from './showcase/showcase.component';
+
+import { ShowcaseModule } from './showcase/showcase.module';
 
 @NgModule({
   declarations: [
     BodyComponent,
-    JumbotronComponent,
-    ShowcaseComponent
+    JumbotronComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ShowcaseModule
   ],
   providers: [],
   bootstrap: [BodyComponent],
