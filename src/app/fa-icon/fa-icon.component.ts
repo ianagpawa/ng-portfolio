@@ -6,13 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./fa-icon.component.css']
 })
 export class FaIconComponent implements OnInit {
-  @Input() prefix: string;
-  @Input() iconName: string;
+  @Input() input: string[];
 
   constructor() { }
 
   ngOnInit(): void { }
-
-  getIcon() { return [this.prefix, this.iconName]; }
-
 }
