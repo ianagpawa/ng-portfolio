@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 
@@ -9,7 +8,6 @@ import { ShowcaseComponent } from './showcase.component';
     ShowcaseComponent
   ],
   imports: [
-    BrowserModule,
     CarouselModule
   ],
   providers: [],

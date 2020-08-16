@@ -1,19 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { BodyComponent } from './body.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 
 import { ShowcaseModule } from './showcase/showcase.module';
+import { ModalModule } from './modal/modal.module';
 
 @NgModule({
   declarations: [
     BodyComponent,
-    JumbotronComponent
+    JumbotronComponent,
   ],
   imports: [
-    BrowserModule,
-    ShowcaseModule
+    ShowcaseModule,
+    ModalModule
   ],
   providers: [],
   bootstrap: [BodyComponent],

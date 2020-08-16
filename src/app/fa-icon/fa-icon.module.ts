@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +10,6 @@ import { FaIconComponent } from './fa-icon.component';
     FaIconComponent,
   ],
   imports: [
-    BrowserModule,
     FontAwesomeModule
   ],
   providers: [],
