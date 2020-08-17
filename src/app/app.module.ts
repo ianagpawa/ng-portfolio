@@ -3,25 +3,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderModule } from './header/header.module';
 import { BodyModule } from './body/body.module';
-import { FaIconModule } from './fa-icon/fa-icon.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    BodyModule,
-    FaIconModule
+    HeaderModule,
+    BodyModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

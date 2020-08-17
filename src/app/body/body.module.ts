@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 
 import { BodyComponent } from './body.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
-
 import { ShowcaseModule } from './showcase/showcase.module';
 import { ModalModule } from './modal/modal.module';
 
@@ -16,7 +15,7 @@ import { ModalModule } from './modal/modal.module';
     ModalModule
   ],
   providers: [],
-  bootstrap: [BodyComponent],
+  bootstrap: [ BodyComponent ],
   exports: [ BodyComponent ]
 })
 export class BodyModule { }
