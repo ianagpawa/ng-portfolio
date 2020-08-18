@@ -1,5 +1,5 @@
 <main role="main">
     <app-jumbotron></app-jumbotron>
-    <app-showcase class="album py-5 bg-light"></app-showcase>
-    <app-modal></app-modal>
+    <app-showcase (output)="showcaseOutput($event)" class="album py-5 bg-light"></app-showcase>
+    <app-modal [input]="modalInput"></app-modal>
 </main>

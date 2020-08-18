@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-showcase',
@@ -6,16 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./showcase.component.css']
 })
 export class ShowcaseComponent implements OnInit {
-  cars;
+  @Output() output: EventEmitter<any> = new EventEmitter();
+
+  apps: any[];
   constructor() { 
     
   }
 
   ngOnInit(): void {
-    this.cars = [1,2,3, 1,2,3];
+    this.apps = [1,2,3, 1,2,3];
+
     // techblog
     // weather
     // music
+  }
+
+  onClick(event) {
+    this.output.emit({ selectedApp: event });
   }
 
 }

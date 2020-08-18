@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-modal',
@@ -7,12 +8,21 @@ import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
   @Input() input: EventEmitter<any>;
+  subscriptions: Subscription[];
   visible: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
-    this.input = new EventEmitter();
     this.visible = false;
+    this.subscriptions = [];
+
+    if (this.input) {
+      this.input.subscribe(data => {
+        this.visible = true;
+        console.log('data', data);
+      });
+    }
   }
 
 }

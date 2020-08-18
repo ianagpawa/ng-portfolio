@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-body',
@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
+  modalInput: EventEmitter<any>;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.modalInput = new EventEmitter();
+  }
+
+  showcaseOutput(event): void {
+    if (event && event.selectedApp) {
+      this.modalInput.emit(event);
+    }
   }
 
 }
