@@ -6,17 +6,17 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
-  modalInput: EventEmitter<any>;
+  modalInput: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
-    this.modalInput = new EventEmitter();
+
   }
 
   showcaseOutput(event): void {
-    if (event && event.selectedApp) {
-      this.modalInput.emit(event);
+    if (event && event.selectedProject) {
+      this.modalInput.emit(event.selectedProject);
     }
   }
 

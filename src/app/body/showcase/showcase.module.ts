@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
-
+import { FaIconModule } from 'src/app/fa-icon/fa-icon.module';
 import { ShowcaseComponent } from './showcase.component';
 
 @NgModule({
@@ -8,7 +8,8 @@ import { ShowcaseComponent } from './showcase.component';
     ShowcaseComponent
   ],
   imports: [
-    CarouselModule
+    CarouselModule,
+    FaIconModule
   ],
   providers: [],
   bootstrap: [ ShowcaseComponent ],

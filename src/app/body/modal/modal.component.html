@@ -1,28 +1,17 @@
-<p-dialog header="Header" [(visible)]="visible" [style]="{width: '50vw'}" [baseZIndex]="10000" [modal]="true" [draggable]="false" [resizable]="false">
-    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
-    <!-- <ng-template pTemplate="footer">
-        <p-button icon="pi pi-check" label="Yes" styleClass="p-button-text"></p-button>
-        <p-button icon="pi pi-times" label="No"></p-button>
-    </ng-template> -->
-    <div class="col-md-12">
-        <div class="card mb-4 shadow-sm">
-            <img src="../assets/placeholder.jpeg" width="100%" height="500" class="icard-img-top">
-            <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a href="https://www.github.com/ianagpawa" class="text-white" target="_blank">
-                            <button type="button" class="btn btn-md"><app-fa-icon [input]="['fab', 'github']"></app-fa-icon></button>
-                        </a>
-                        <a href="https://www.github.com/ianagpawa" class="text-white" target="_blank">
-                            <button type="button" class="btn btn-md"><app-fa-icon [input]="['fab', 'sith']"></app-fa-icon></button>
-                        </a>
-                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                </div>
+<p-dialog [(visible)]="visible" [style]="{width: '25vw'}" [baseZIndex]="10000" [modal]="true" [draggable]="false" [resizable]="false" showHeader="false">
+    <p-header styleClass="text-center">{{title}} </p-header>
+    {{description}}
+    <p-footer>
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+                <a href="https://www.github.com/ianagpawa" class="text-white" target="_blank">
+                    <button type="button" class="btn btn-md"><app-fa-icon [input]="['fab', 'github']"></app-fa-icon></button>
+                </a>
+                <a href="https://www.github.com/ianagpawa" class="text-white" target="_blank">
+                    <button type="button" class="btn btn-md"><app-fa-icon [input]="['fab', 'sith']"></app-fa-icon></button>
+                </a>
             </div>
+            <small class="text-muted">9 mins</small>
         </div>
-    </div>
+    </p-footer>
 </p-dialog>

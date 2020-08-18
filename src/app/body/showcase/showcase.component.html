@@ -1,14 +1,18 @@
-<p-carousel [value]="apps" [autoplayInterval]="10000" [circular]="true" [numVisible]="3" [numScroll]="3">
-    <ng-template let-app pTemplate="item">
+<p-carousel [value]="projects" [autoplayInterval]="10000" [circular]="true" [numVisible]="3" [numScroll]="3">
+    <ng-template let-project pTemplate="item">
         <div class="col-md-12">
-            <div class="card mb-4 shadow-sm" (click)="onClick(app)">
+            <div class="card mb-4 shadow-sm" (click)="onClick(project)">
                 <img src="../assets/placeholder.jpeg" width="100%" height="300" class="icard-img-top">
                 <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text">{{project.description}}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            <a href="https://www.github.com/ianagpawa" class="text-white" target="_blank">
+                                <button type="button" class="btn btn-md"><app-fa-icon [input]="['fab', 'github']"></app-fa-icon></button>
+                            </a>
+                            <a href="https://www.github.com/ianagpawa" class="text-white" target="_blank">
+                                <button type="button" class="btn btn-md"><app-fa-icon [input]="['fab', 'sith']"></app-fa-icon></button>
+                            </a>
                         </div>
                         <small class="text-muted">9 mins</small>
                     </div>

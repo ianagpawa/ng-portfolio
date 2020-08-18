@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { IProject } from '../../app.interfaces';
 
 @Component({
   selector: 'app-showcase',
@@ -8,21 +9,47 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class ShowcaseComponent implements OnInit {
   @Output() output: EventEmitter<any> = new EventEmitter();
 
-  apps: any[];
+  projects: IProject[];
   constructor() { 
     
   }
 
   ngOnInit(): void {
-    this.apps = [1,2,3, 1,2,3];
+    this.projects = [
+      {
+        id: 'techBlog',
+        title: 'Tech Blog',
+        description: 'A tech blog'
+      }, {
+        id: 'weather',
+        title: 'Weather App',
+        description: 'A web app for viewing the weather.'
+      }, {
+        id: 'auralHistory',
+        title: 'Music web app',
+        description: 'something something web app'
+      }, {
+        id: 'techBlog',
+        title: 'Tech Blog',
+        description: 'A tech blog'
+      }, {
+        id: 'weather',
+        title: 'Weather App',
+        description: 'A web app for viewing the weather.'
+      }, {
+        id: 'auralHistory',
+        title: 'Music web app',
+        description: 'something something web app'
+      }
+    ];
 
     // techblog
     // weather
-    // music
+    // news
   }
 
   onClick(event) {
-    this.output.emit({ selectedApp: event });
+    this.output.emit({ selectedProject: event });
   }
 
 }
