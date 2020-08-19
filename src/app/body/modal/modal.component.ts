@@ -26,7 +26,6 @@ export class ModalComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.input) {
       this.input.subscribe((data: IProject) => {
         this.visible = true;
-        console.log('data', data);
         this.description = data.description;
         this.title = data.title;
       });
