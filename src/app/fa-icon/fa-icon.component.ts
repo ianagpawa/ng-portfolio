@@ -7,8 +7,23 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FaIconComponent implements OnInit {
   @Input() input: string[];
+  @Input() size: boolean;
+  @Input() color: string;
 
   constructor() { }
 
   ngOnInit(): void { }
+
+  ngAfterViewInit() {
+    // console.log(this.size)
+  }
+
+  getSize() {
+    console.log('getSize', this.size);
+    return this.size;
+  }
+
+  getColor(): string {
+    return this.color || 'black';
+  }
 }

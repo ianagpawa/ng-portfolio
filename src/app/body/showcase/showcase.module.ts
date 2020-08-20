@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
+import { BlockUIModule } from 'primeng/blockui';
+import { PanelModule } from 'primeng/panel';
 import { FaIconModule } from 'src/app/fa-icon/fa-icon.module';
 import { ShowcaseComponent } from './showcase.component';
 
@@ -9,6 +11,8 @@ import { ShowcaseComponent } from './showcase.component';
   ],
   imports: [
     CarouselModule,
+    BlockUIModule,
+    PanelModule,
     FaIconModule
   ],
   providers: [],

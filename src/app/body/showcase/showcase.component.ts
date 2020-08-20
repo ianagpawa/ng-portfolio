@@ -10,6 +10,8 @@ export class ShowcaseComponent implements OnInit {
   @Output() output: EventEmitter<any> = new EventEmitter();
 
   projects: IProject[];
+  blockCard: boolean = false;
+
   constructor() { 
     
   }
@@ -48,8 +50,8 @@ export class ShowcaseComponent implements OnInit {
     // news
   }
 
-  onClick(event) {
-    this.output.emit({ selectedProject: event });
-  }
+  // onClick(event) {
+  //   this.output.emit({ selectedProject: event });
+  // }
 
 }
