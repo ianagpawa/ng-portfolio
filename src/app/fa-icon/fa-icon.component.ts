@@ -15,11 +15,9 @@ export class FaIconComponent implements OnInit {
   ngOnInit(): void { }
 
   ngAfterViewInit() {
-    // console.log(this.size)
   }
 
   getSize() {
-    console.log('getSize', this.size);
     return this.size;
   }
 

@@ -1,8 +1,7 @@
 <p-carousel [value]="projects" [autoplayInterval]="10000" [circular]="true" [numVisible]="3" [numScroll]="3">
     <ng-template let-project pTemplate="item">
-        <div class="col-md-12" (mouseover)="blockCard=true" (mouseout)="blockCard=false">
-            <p-blockUI [target]="pnl" [blocked]="blockCard">
-                <i class="pi pi-lock" style="font-size: 3rem"></i>
+        <div class="col-md-12" (mouseover)="onHover(project.id)" (mouseout)="onHover(project.id)">
+            <p-blockUI [target]="pnl" [blocked]="getBlocking(project.id)">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group text-center">
                         <a href="https://www.github.com/ianagpawa" class="text-white" target="_blank">

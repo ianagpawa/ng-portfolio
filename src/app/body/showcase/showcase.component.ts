@@ -10,13 +10,15 @@ export class ShowcaseComponent implements OnInit {
   @Output() output: EventEmitter<any> = new EventEmitter();
 
   projects: IProject[];
-  blockCard: boolean = false;
+  blockCard: any;
 
   constructor() { 
     
   }
 
   ngOnInit(): void {
+    this.blockCard = {};
+    
     this.projects = [
       {
         id: 'techBlog',
@@ -45,6 +47,8 @@ export class ShowcaseComponent implements OnInit {
       }
     ];
 
+    this.projects.forEach(proj => this.blockCard[proj.id] = false);
+
     // techblog
     // weather
     // news
@@ -53,5 +57,13 @@ export class ShowcaseComponent implements OnInit {
   // onClick(event) {
   //   this.output.emit({ selectedProject: event });
   // }
+
+  onHover(id): void {
+    this.blockCard[id] = !this.blockCard[id];
+  }
+
+  getBlocking(id): boolean {
+    return this.blockCard[id];
+  }
 
 }
