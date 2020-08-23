@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IProject } from '../../app.interfaces';
 import { PROJECTS } from './showcase.constants';
 
@@ -8,7 +8,6 @@ import { PROJECTS } from './showcase.constants';
   styleUrls: ['./showcase.component.css']
 })
 export class ShowcaseComponent implements OnInit {
-  @Output() output: EventEmitter<any> = new EventEmitter();
 
   projects: IProject[];
   blockCard: any;
@@ -22,7 +21,6 @@ export class ShowcaseComponent implements OnInit {
       .then( () => this.projects.forEach(proj => this.blockCard[proj.id] = false) );
 
     this.blockCard = {};
-
   }
 
   onHover(id): void {
