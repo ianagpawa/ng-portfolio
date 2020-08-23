@@ -16,11 +16,12 @@ export class ShowcaseComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    Promise.resolve(PROJECTS)
+      .then( projects => this.projects = projects)
+      .catch( () => this.projects = [] )
+      .then( () => this.projects.forEach(proj => this.blockCard[proj.id] = false) );
+
     this.blockCard = {};
-
-    this.projects = PROJECTS;
-
-    this.projects.forEach(proj => this.blockCard[proj.id] = false);
 
   }
 
