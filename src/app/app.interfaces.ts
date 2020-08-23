@@ -6,4 +6,5 @@ export interface IProject {
     github?: string;
     site?: string;
     tech?: string[];
+    details?: string;
 }
