@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+Deploy on Github Pages
+Update angular.json
+outputPath: 'dir/'
+ng build --prod --base-href "https://ianagpawa.github.io/ng-portfolio/"
+
+ngh
+
+https://ianagpawa.github.io/ng-portfolio/
+
+copy 404.html page

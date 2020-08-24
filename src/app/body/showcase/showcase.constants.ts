@@ -7,7 +7,7 @@ export const PROJECTS: IProject[] = [
       description: 'Blurbs chronicling personal tech projects. Built simple authentication and registration system.  Developed database models for users and posts.',
       site: 'https://chronicle-170419.appspot.com',
       github: 'https://github.com/ianagpawa/tech-blog',
-      tech: ['Python', 'Flask', 'Google App Engine', 'NoSQL'],
+      tech: ['python', 'google'],
       image: 'chronicle'
     }, {
       id: 'weather',
@@ -15,7 +15,7 @@ export const PROJECTS: IProject[] = [
       description: 'A 5 day weather forecast app using React.',
       site: 'https://weather-forecast-192305.appspot.com',
       github: 'https://weather-forecast-192305.appspot.com',
-      tech: ['ES6', 'React', 'Redux'],
+      tech: ['react'],
       image: 'forecast'
     }, {
       id: 'auralHistory',
@@ -24,7 +24,7 @@ export const PROJECTS: IProject[] = [
       details: 'Provided user registration and authentication system, where only users can post, edit and delete their own items.  Authentication is handled by Oauth2 through Facebook and Google, and HTTP methods are mapped to CRUD operations to implement a properly secured web application.  Developed database schema for storing playlists of songs.  Configured and secured a baseline Ubuntu Amazon Web Services server into an Apache Web Server and PostgreSQL database server.',
       site: 'http://ec2-34-201-35-166.compute-1.amazonaws.com',
       github: 'https://github.com/ianagpawa/catalog',
-      tech: ['Flask', 'PostgreSQL', 'Python', 'Amazon Web Services'],
+      tech: ['python', 'aws'],
       image: 'catalog'
     }, {
       id: 'newsfeed',
@@ -32,14 +32,14 @@ export const PROJECTS: IProject[] = [
       description: 'Article aggregator from some common news sites.',
       site: null,
       github: 'https://github.com/ianagpawa/newsfeed',
-      tech: ['Angular', 'Github']
+      tech: ['angular', 'github']
     }, {
       id: 'imageSearch',
       title: 'Image Search Microservice',
       description: 'Developed an image search API microservice using the Google Custom Search API.  Search terms can be passed as parameters and a JSON output will be received.  Search results can be paginated through by passing an additional parameter.  Search terms are recorded and the ten most recent search can be viewed via an API endpoint.',
       site: 'https://imgsearch-ia.herokuapp.com',
       github: 'https://github.com/ianagpawa/imageSearch',
-      tech: ['MongoDB', 'Express', 'Node', 'Heroku'],
+      tech: ['node'],
       image: 'image'
     }, {
       id: 'audacious',
@@ -48,7 +48,7 @@ export const PROJECTS: IProject[] = [
       details: 'This repo is for a python script to convert music playlists saved in Windows to Ubuntu use-able playlists. File paths of song files are updated and new playlists are created. This works best if all your music is stored in a centralized location (sub-folders are fine).',
       site: null,
       github: 'https://github.com/ianagpawa/audacious.git',
-      tech: ['Python']
+      tech: ['python']
     }
 ];
 // forecast = Project("Weather React",
