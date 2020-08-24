@@ -31,8 +31,12 @@ export class ShowcaseComponent implements OnInit {
     return this.blockCard[id];
   }
 
-  getTechUsed(arr): string{
+  getTechUsed(arr): string {
     return arr.join(', ');
+  }
+
+  getImagePath(id?: string): string {
+    return `../assets/${id || 'github'}.png`;
   }
 
 }

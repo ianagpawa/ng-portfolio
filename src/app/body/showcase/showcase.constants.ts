@@ -1,26 +1,31 @@
-export const PROJECTS = [
+import { IProject } from 'src/app/app.interfaces';
+
+export const PROJECTS: IProject[] = [
     {
       id: 'techBlog',
       title: 'Tech Blog',
       description: 'Blurbs chronicling personal tech projects. Built simple authentication and registration system.  Developed database models for users and posts.',
       site: 'https://chronicle-170419.appspot.com',
       github: 'https://github.com/ianagpawa/tech-blog',
-      tech: ['Python', 'Flask', 'Google App Engine', 'NoSQL']
+      tech: ['Python', 'Flask', 'Google App Engine', 'NoSQL'],
+      image: 'chronicle'
     }, {
       id: 'weather',
-      title: 'React Weather App',
+      title: 'React Weather Forecast',
       description: 'A 5 day weather forecast app using React.',
       site: 'https://weather-forecast-192305.appspot.com',
       github: 'https://weather-forecast-192305.appspot.com',
-      tech: ['ES6', 'React', 'Redux']
+      tech: ['ES6', 'React', 'Redux'],
+      image: 'forecast'
     }, {
       id: 'auralHistory',
-      title: 'Music web app',
+      title: 'Youtube Music player',
       description: 'Item catalog that stores playlists of songs.',
       details: 'Provided user registration and authentication system, where only users can post, edit and delete their own items.  Authentication is handled by Oauth2 through Facebook and Google, and HTTP methods are mapped to CRUD operations to implement a properly secured web application.  Developed database schema for storing playlists of songs.  Configured and secured a baseline Ubuntu Amazon Web Services server into an Apache Web Server and PostgreSQL database server.',
       site: 'http://ec2-34-201-35-166.compute-1.amazonaws.com',
       github: 'https://github.com/ianagpawa/catalog',
-      tech: ['Flask', 'PostgreSQL', 'Python', 'Amazon Web Services']
+      tech: ['Flask', 'PostgreSQL', 'Python', 'Amazon Web Services'],
+      image: 'catalog'
     }, {
       id: 'newsfeed',
       title: 'News Feed',
@@ -34,7 +39,8 @@ export const PROJECTS = [
       description: 'Developed an image search API microservice using the Google Custom Search API.  Search terms can be passed as parameters and a JSON output will be received.  Search results can be paginated through by passing an additional parameter.  Search terms are recorded and the ten most recent search can be viewed via an API endpoint.',
       site: 'https://imgsearch-ia.herokuapp.com',
       github: 'https://github.com/ianagpawa/imageSearch',
-      tech: ['MongoDB', 'Express', 'Node', 'Heroku']
+      tech: ['MongoDB', 'Express', 'Node', 'Heroku'],
+      image: 'image'
     }, {
       id: 'audacious',
       title: 'Playlist Path Script',
@@ -43,7 +49,7 @@ export const PROJECTS = [
       site: null,
       github: 'https://github.com/ianagpawa/audacious.git',
       tech: ['Python']
-    },
+    }
 ];
 // forecast = Project("Weather React",
 //                     "A 5 day weather forecast",
