@@ -20,7 +20,7 @@ export const PROJECTS = [
       details: 'Provided user registration and authentication system, where only users can post, edit and delete their own items.  Authentication is handled by Oauth2 through Facebook and Google, and HTTP methods are mapped to CRUD operations to implement a properly secured web application.  Developed database schema for storing playlists of songs.  Configured and secured a baseline Ubuntu Amazon Web Services server into an Apache Web Server and PostgreSQL database server.',
       site: 'http://ec2-34-201-35-166.compute-1.amazonaws.com',
       github: 'https://github.com/ianagpawa/catalog',
-      tech: ['Flask', 'PostgreSQL','Python', 'Amazon Web Services']
+      tech: ['Flask', 'PostgreSQL', 'Python', 'Amazon Web Services']
     }, {
       id: 'newsfeed',
       title: 'News Feed',
