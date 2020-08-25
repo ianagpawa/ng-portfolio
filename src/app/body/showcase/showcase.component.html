@@ -3,21 +3,25 @@
         <div class="col-md-12" (mouseover)="onHover(project.id)" (mouseout)="onHover(project.id)">
             <p-blockUI [target]="pnl" [blocked]="getBlocking(project.id)" styleClass="bg-dark">
                 <div class="container text-white">
-                    <div class="row d-flex justify-content-around align-items-center col-md-10 offset-md-1">
+                    <div class="row d-flex justify-content-around mb-4 col-md-10 offset-md-1">
                         {{project.description}}
+                    </div>
+                    <div class="row mt4 d-flex justify-content-around mb-3">
+                        Built with {{getTechUsed(project.tech)}}
                     </div>
                     <div class="row d-flex justify-content-around align-items-center">
                         <div class="btn-group text-center">
                             <a *ngIf="project.github" href={{project.github}} class="text-white" target="_blank">
-                                <button type="button" class="btn btn-lg"><app-fa-icon [input]="['fab', 'github']" [color]="'white'" [size]="true"></app-fa-icon></button>
+                                <button pButton type="button" class="btn btn-lg" pTooltip="The Code" tooltipPosition="left">
+                                    <app-fa-icon [input]="['fab', 'github']" [color]="'white'" [size]="true"></app-fa-icon>
+                                </button>
                             </a>
                             <a *ngIf="project.site" href={{project.site}} class="text-white" target="_blank">
-                                <button type="button" class="btn btn-lg"><app-fa-icon [input]="['fab', 'sith']" [color]="'white'" [size]="true"></app-fa-icon></button>
+                                <button type="button" class="btn btn-lg" pTooltip="The Site" tooltipPosition="right" >
+                                    <app-fa-icon [input]="['fab', 'sith']" [color]="'white'" [size]="true"></app-fa-icon>
+                                </button>
                             </a>
                         </div>
-                    </div>
-                    <div class="row mt4 d-flex justify-content-around">
-                        Built with {{getTechUsed(project.tech)}}
                     </div>
                 </div>
             </p-blockUI>
