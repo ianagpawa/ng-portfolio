@@ -14,8 +14,8 @@ export const PROJECTS: IProject[] = [
       title: 'React Weather Forecast',
       description: 'A 5 day weather forecast app using React.',
       site: 'https://weather-forecast-192305.appspot.com',
-      github: 'https://weather-forecast-192305.appspot.com',
-      tech: ['react'],
+      github: 'https://github.com/ianagpawa/weather-forecast',
+      tech: ['react', 'google'],
       image: 'forecast'
     }, {
       id: 'auralHistory',
