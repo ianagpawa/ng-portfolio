@@ -51,7 +51,7 @@ export class ShowcaseComponent implements OnInit {
   getTechUsed(arr): string {
     let output = '';
     arr.forEach((x, ind) => {
-      output += ind === arr.length - 1
+      output += ind !== 0 && ind === arr.length - 1
         ? ` and ${x}.`
         : `${x},`
     });
