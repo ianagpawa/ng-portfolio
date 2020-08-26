@@ -49,13 +49,7 @@ export class ShowcaseComponent implements OnInit {
   }
 
   getTechUsed(arr): string {
-    let output = '';
-    arr.forEach((x, ind) => {
-      output += ind !== 0 && ind === arr.length - 1
-        ? ` and ${x}.`
-        : `${x},`
-    });
-    return output;
+    return arr.join(' and ');
   }
 
   getImagePath(id?: string): string {
