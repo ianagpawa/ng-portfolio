@@ -25,11 +25,15 @@
                     </div>
                 </div>
             </p-blockUI>
-            <p-panel styleClass="text-center bg-dark" #pnl>
+            <p-panel styleClass="text-center" #pnl>
                 <p-header >
-                    <div class="row col-md-12 justify-content-around align-items-center">
-                        <div class="col-sm-2" *ngFor="let tech of project.tech">
-                            <app-fa-icon [input]="['fab', tech]" [color]="'black'"></app-fa-icon>
+                    <div class="container w-100">
+                        <div class="row d-flex justify-content-better align-items-center">
+                            <div class="col">
+                                <button pButton type="button" class="btn btn-md" *ngFor="let tech of project.tech">
+                                    <app-fa-icon [input]="['fab', tech]" [color]="'black'"></app-fa-icon>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </p-header>
