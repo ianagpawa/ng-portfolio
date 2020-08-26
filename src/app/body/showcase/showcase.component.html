@@ -12,12 +12,12 @@
                     <div class="row d-flex justify-content-around align-items-center">
                         <div class="btn-group text-center">
                             <a *ngIf="project.github" href={{project.github}} class="text-white" target="_blank">
-                                <button pButton type="button" class="btn btn-lg" pTooltip="The Code" tooltipPosition="left">
+                                <button pButton type="button" class="btn btn-lg" pTooltip="Source Code" tooltipPosition="left">
                                     <app-fa-icon [input]="['fab', 'github']" [color]="'white'" [size]="true"></app-fa-icon>
                                 </button>
                             </a>
                             <a *ngIf="project.site" href={{project.site}} class="text-white" target="_blank">
-                                <button type="button" class="btn btn-lg" pTooltip="The Site" tooltipPosition="right" >
+                                <button type="button" class="btn btn-lg" pTooltip="Website" tooltipPosition="right" >
                                     <app-fa-icon [input]="['fab', 'sith']" [color]="'white'" [size]="true"></app-fa-icon>
                                 </button>
                             </a>
