@@ -1,4 +1,4 @@
-<p-carousel [value]="projects" [autoplayInterval]="7500" [circular]="true" [numVisible]="3" [numScroll]="1">
+<p-carousel [value]="projects" [autoplayInterval]="7500" [responsiveOptions]="responsiveOptions" [circular]="true" [numVisible]="3" [numScroll]="1">
     <ng-template let-project pTemplate="item">
         <div class="col-md-12" (mouseover)="onHover(project.id)" (mouseout)="onHover(project.id)">
             <p-blockUI [target]="pnl" [blocked]="getBlocking(project.id)" styleClass="bg-dark">
