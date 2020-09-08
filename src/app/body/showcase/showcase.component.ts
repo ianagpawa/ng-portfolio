@@ -53,7 +53,7 @@ export class ShowcaseComponent implements OnInit {
   }
 
   getImagePath(id?: string): string {
-    return `./assets/images/${id || 'github'}.png`;
+    return `./assets/images/${id}.png`;
   }
 
 }

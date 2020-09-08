@@ -2,13 +2,21 @@ import { IProject } from 'src/app/app.interfaces';
 
 export const PROJECTS: IProject[] = [
     {
-      id: 'techBlog',
-      title: 'Tech Blog',
-      description: 'A Python Flask blog with a NoSQL datastore hosted on Google App Engine.',
-      site: 'https://chronicle-170419.appspot.com',
-      github: 'https://github.com/ianagpawa/tech-blog',
-      tech: ['python', 'google'],
-      image: 'chronicle'
+      id: 'newsfeed',
+      title: 'News Feed',
+      description: 'Article aggregator from some common news sites.',
+      site: 'https://ianagpawa.github.io/newsfeed/',
+      github: 'https://github.com/ianagpawa/newsfeed',
+      tech: ['angular', 'github'],
+      image: 'newsfeed'
+    }, {
+      id: 'blog',
+      title: 'Personal Blog',
+      description: 'A personal blog created with React and Gatsby hosted on Netlify.',
+      site: 'https://inspiring-darwin-85eb36.netlify.app',
+      github: 'https://github.com/ianagpawa/blog',
+      tech: ['react'],
+      image: 'blog'
     }, {
       id: 'weather',
       title: 'React Weather Forecast',
@@ -27,13 +35,6 @@ export const PROJECTS: IProject[] = [
       tech: ['python', 'aws'],
       image: 'catalog'
     }, {
-      id: 'newsfeed',
-      title: 'News Feed',
-      description: 'Article aggregator from some common news sites.',
-      site: null,
-      github: 'https://github.com/ianagpawa/newsfeed',
-      tech: ['angular', 'github']
-    }, {
       id: 'imageSearch',
       title: 'Image Search Microservice',
       description: `An image search API microservice utilizing Node, Express, Google Custom Search API, and MongoDB.  
@@ -48,6 +49,7 @@ export const PROJECTS: IProject[] = [
       description: 'A Python script for updating song paths in Windows-based music playlists to Linux-based paths.',
       site: null,
       github: 'https://github.com/ianagpawa/audacious.git',
-      tech: ['python']
+      tech: ['python'],
+      image: 'audacious'
     }
 ];
