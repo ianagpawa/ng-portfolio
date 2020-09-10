@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "github": "ng build --prod --base-href https://ianagpawa.github.io/ng-portfolio/",
-    "deploy": "npm github && ngh"
+    "deploy": "npm run github && ngh"
   },
   "private": true,
   "dependencies": {
