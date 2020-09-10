@@ -1,53 +1,15 @@
-<p-carousel [value]="projects" [autoplayInterval]="7500" [responsiveOptions]="responsiveOptions" [circular]="true" [numVisible]="3" [numScroll]="1">
-    <ng-template let-project pTemplate="item">
-        <div class="col-md-12" (mouseover)="onHover(project.id)" (mouseout)="onHover(project.id)">
-            <p-blockUI [target]="pnl" [blocked]="getBlocking(project.id)" styleClass="bg-dark">
-                <div class="container text-white">
-                    <div class="row d-flex justify-content-around mb-4 col-md-10 offset-md-1">
-                        {{project.description}}
-                    </div>
-                    <div class="row mt4 d-flex justify-content-around mb-3">
-                        Built with {{getTechUsed(project.tech)}}.
-                    </div>
-                    <div class="row d-flex justify-content-around align-items-center">
-                        <div class="btn-group text-center">
-                            <a *ngIf="project.github" href={{project.github}} class="text-white" target="_blank">
-                                <button pButton type="button" class="btn btn-lg" pTooltip="Source Code" tooltipPosition="left">
-                                    <app-fa-icon [input]="['fab', 'github']" [color]="'white'" [size]="true"></app-fa-icon>
-                                </button>
-                            </a>
-                            <a *ngIf="project.site" href={{project.site}} class="text-white" target="_blank">
-                                <button type="button" class="btn btn-lg" pTooltip="Website" tooltipPosition="right" >
-                                    <app-fa-icon [input]="['fab', 'sith']" [color]="'white'" [size]="true"></app-fa-icon>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </p-blockUI>
-            <p-panel styleClass="text-center" #pnl>
-                <p-header >
-                    <div class="container w-100">
-                        <div class="row d-flex justify-content-better align-items-center">
-                            <div class="col">
-                                <button pButton type="button" class="btn btn-md" *ngFor="let tech of project.tech">
-                                    <app-fa-icon [input]="['fab', tech]" [color]="'black'"></app-fa-icon>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </p-header>
-                <div class="mb-4 shadow-sm">
-                    <img src="{{getImagePath(project.image)}}" width="100%" height="100%" class="icard-img-top">
-                </div>
-                <p-footer>
-                    <div class="container ng-light">
-                        <div class="row col-md-12 justify-content-around align-items-center">
-                            <h4 class="text-center">{{project.title}}</h4>
-                        </div>
-                    </div>
-                </p-footer>
-            </p-panel>
+<p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '100vw', 'height': '100%'}" [numVisible]="6"
+    [circular]="true" [showItemNavigators]="true">
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 50%; display: block; cursor: pointer;" (click)="onClick(item.site)" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+        <div class="p-grid p-nogutter p-justify-center">
+            <img [src]="item.thumbnailImageSrc" style="width: 100%; display: block;" />
         </div>
     </ng-template>
-</p-carousel>
+    <ng-template pTemplate="caption" let-item>
+        <h4 style="margin-bottom: .5rem; color: #ffffff;">{{item.title}}</h4>
+        <p>{{item.alt}}</p>
+    </ng-template>
+</p-galleria>

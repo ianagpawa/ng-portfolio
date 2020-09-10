@@ -1,10 +1,22 @@
 import { IProject } from 'src/app/app.interfaces';
 
+export const GET_IMAGES = () => {
+  return PROJECTS.map(proj => {
+    return {
+      previewImageSrc: `./assets/images/${proj.image}.png`,
+      thumbnailImageSrc: `./assets/images/${proj.image}.png`,
+      alt: proj.description,
+      title: proj.title,
+      site: proj.site
+    }
+  });
+}
+
 export const PROJECTS: IProject[] = [
     {
       id: 'newsfeed',
       title: 'News Feed',
-      description: 'Article aggregator from some common news sites.',
+      description: 'Angular news site using NYTimes API and hosted on Github Pages.',
       site: 'https://ianagpawa.github.io/newsfeed/',
       github: 'https://github.com/ianagpawa/newsfeed',
       tech: ['angular', 'github'],
