@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "github": "ng build --prod --base-href https://ianagpawa.github.io/ng-portfolio/",
+    "deploy": "npm github && ngh"
   },
   "private": true,
   "dependencies": {
