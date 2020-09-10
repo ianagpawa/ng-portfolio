@@ -1,12 +1,7 @@
 <p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '100vw', 'height': '100%'}" [numVisible]="6"
-    [circular]="true" [showItemNavigators]="true">
+    [circular]="true" [showThumbnails]="false" [showIndicators]="false" [showItemNavigators]="true">
     <ng-template pTemplate="item" let-item>
-        <img [src]="item.previewImageSrc" style="width: 50%; display: block; cursor: pointer;" (click)="onClick(item.site)" />
-    </ng-template>
-    <ng-template pTemplate="thumbnail" let-item>
-        <div class="p-grid p-nogutter p-justify-center">
-            <img [src]="item.thumbnailImageSrc" style="width: 100%; display: block;" />
-        </div>
+        <img [src]="item.previewImageSrc" style="width: 69%; height: 100%; display: block; cursor: pointer;" (click)="onClick(item.site)" />
     </ng-template>
     <ng-template pTemplate="caption" let-item>
         <h4 style="margin-bottom: .5rem; color: #ffffff;">{{item.title}}</h4>
